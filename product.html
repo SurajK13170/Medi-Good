@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       #product{
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4,200px);
+        gap: 20px;
+        margin-right: 10px;
+        margin-top: 420px;
+        /* background-color: burlywood; */
+
+       }
+
+        #nav1 {
+    height: 60px;
+    text-align: center;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    margin: auto;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* background-color: rgb(255, 241, 217); */
+    
+  }
+  
+
+  
+  .left a {
+    text-decoration: none;
+    color: black;
+    margin-left: 8px;
+    font-weight: bold;
+  }
+
+  .rigth a {
+    text-decoration: none;
+    color: black;
+    margin-left: 8px;
+  }
+
+  /* #nav1 div img {
+    width: 9%;
+    margin-left: 10px;
+  } */
+
+  #nav2 {
+    
+    display: flex;
+    height: 43px;
+    margin-top: 20px;
+background-color: antiuewhite;
+    justify-content: space-around;
+    
+    
+
+  }
+
+  #nav2 div {
+    display: flex;
+    align-items: center;
+  } 
+
+  #nav2 input {
+    width: 120%;
+    margin-right: 20px;
+    height: 40px;
+    border: none;
+    background-color: rgb(245, 237, 237); 
+    padding: 10px;
+    border-radius:5px;
+  }
+
+  #nav2 button {
+    border: none;
+    background-color: rgb(255, 111, 97);
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 10px;
+
+  }
+
+
+
+    body{
+        padding: 0;
+        margin: 0px;
+    }
+
+    #card{
+    /* background-color: bisque; */
+     transition: calc(0.5s);
+     /* display:flex ;
+     
+     flex:1; */
+     height: 350px;
+     width: 200px;
+    
+}
+    
+#card:hover{
+    transform: scale(1.05);
+}
+
+#black_div{
+    display: flex;
+   
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: sticky;
+    top: 0;
+    background-color: white;
+}
+.class{
+    text-align: center  ;
+}
+
+.btn:hover{
+background-color:rgb(255, 111, 97);;
+color: white;
+}
+
+
+    </style>
+    <style>
+   /* poster css */
+#poster{
+  width: 100%;
+  height: 300px;
+ margin-top: 40px;
+  display: flex;
+}
+.img1{
+   width: 100%;
+  height: 100%;
+}
+/* filter div */
+#filter_div{
+  width: 90%;
+  margin: auto;
+  height: 50px;
+  display:flex;
+  justify-content: space-between;
+  margin-top: 45px;
+border-radius: 10px;
+background-color: antiquewhite;
+color: white;
+}
+
+
+    </style>
+    <style>
+      /* //footer css */
+
+      
+
+      .end div{
+  margin: auto;
+  width: 100px;
+  padding: 10px;
+  margin-top: 20px;
+
+}
+.end img{
+ width: 100%;
+
+}
+.end{
+  margin-top: 100px;
+  text-align: center;
+  background-color: rgb(255, 252, 248);
+
+
+}
+#footer p{
+    color: gray;
+  }
+ 
+
+ 
+  #footer-search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    padding: 10px;
+    margin-bottom: 30px;
+
+
+  }
+  #footer-search input{
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    background-color: aliceblue;
+
+  }
+  #footer-search button{
+    width: 150px;
+    height: 40px;
+    margin-left: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 111, 97);
+    font-size: 15px;
+  }
+  #footer-search p{
+    font-size: 18px;
+  }
+  #main-footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(255, 252, 248);
+    padding: 10px;
+  }
+  #main-footer img{
+    width: 20px;
+  }
+  #main-footer p{
+    color: gray;
+    font-size: 12px;
+  }
+  #main-footer button{
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 111, 97);
+    font-size: 15px;
+    margin-top: 10px;
+  }
+  #last-footer{
+    display: flex;
+    margin-top: 20px;
+    background-color: rgb(255, 252, 248);
+  }
+  #last-footer{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+  }
+  #last-footer div p{
+    color: gray;
+    font-size: 12px;
+  }
+    </style>
+
+</head>
+<body>
+  
+
+
+
+
+
+
+<div style="width: 100%;">
+
+    <div> 
+   <div  id="black_div" style="background-color: black;color: white;height: 40px;">
+    <div class="inner">Limited Period Offer: Get 15% off on medicines & more offers. Explore</div>
+   </div>
+
+        </div>
+        <div id="nav2" >
+          <div>
+          <input type="search" name="search" value="" id="search_input" placeholder="🔍 Search for Medicines and Health Product"><br><button id="search">search</button>
+        </div>
+          <div><img src="tag.png" style="height: 100%"></div>
+
+          
+          <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
+            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"></path>
+        </svg>
+    <h2>
+        Bag
+    </h2>
+    </div>
+        </div>
+        </div>
+</div>
+   
+    <div id="Navbar">
+        <div id="nav1">
+          <div class="left">
+            <img src="MediGood-Logo-removebg-preview.png" alt="" ;>
+            <a href="">MEDICINES</a>
+            <a href="">LAB TESTES</a>
+            <a href="">CONSULT DOCTORS</a>
+            <a href="">COVID 19</a>
+            <a href="">AYURVEDA</a>
+            <a href="">CARE PLAN</a>
+          </div>
+ 
+
+
+
+
+
+<div id="poster">
+  
+      <img clss="img1"  style="width:100%"  src="https://onemg.gumlet.io/81ff6974-97fe-4be6-a1a9-c985c93fa3ea_1675410105.png?w=899&h=200&format=auto">
+    
+<!--     
+    <img clss="img1" src="https://onemg.gumlet.io/a_ignore,w_480,h_200,c_fit,q_auto,f_auto/421855e3-ec1c-42c9-a5b4-d5153c8f2f54.png"> -->
+  
+</div>
+
+
+<div id="filter_div" style="background-color: gray;">
+  <h2>Features</h2>
+  <div>
+      <div  id="main"style="display:flex">
+     <div id="first">
+        <h2>sort</h2>
+        <select id="sort"style="border-radius: 10px">
+            <option value="">Change price</option>
+            <option value="lower">lower to high</option>
+            <option value="high">high to lower</option>
+          
+        </select>
+    </div>  
+
+    <div>
+      
+        <h2>filter</h2>
+        <select id="filter2"  style="border-radius: 10px;">
+            <option value="">category</option>
+            <option value="Organic India">Organic India</option>
+            <option value="Dabar">Dabar</option>
+            <option value="Himalaya">Himalaya</option>
+            <option value="Kerala">Kerala</option>
+          
+        </select>
+
+    </div>
+  
+</div>
+</div>
+</div>
+</div>
+   <div id="product" >
+
+</div>
+
+
+   
+
+
+
+
+<div id="footer">
+  <h4>Stay Healthy with Tata 1mg: Your Favourite Online Pharmacy and Healthcare Platform</h4>
+  <h5>We Bring Care to Health.</h5>
+  <p>Tata 1mg is India's leading digital healthcare platform. From doctor consultations on chat to online pharmacy
+    and lab tests at home: we have it all covered for you. Having delivered over 25 million orders in 1000+ cities
+    till date, we are on a mission to bring "care" to "health" to give you a flawless healthcare experience.</p>
+  <div id="main-about">
+    <p>INDIA'S</p>
+    <div id="about">
+      <div>
+        <h2>206m+</h2>
+        <p>Visitors</p>
+      </div>
+      <div>
+        <h2>31m++</h2>
+        <p>Orders Delivered</p>
+      </div>
+      <div>
+        <h2>1800+</h2>
+        <p>Cities</p>
+      </div>
+    </div>
+  </div>
+  <div id="footer-search">
+    <p>Get the link to dowanload App</p>
+    <input type="number" placeholder="Enter Phone number">
+    <button>Send Link</button>
+  </div>
+</div>
+<div id="main-footer">
+  <div>
+    <h3>Know Us</h3><br>
+    <p>About Us</p><br>
+    <p>Contect Us</p><br>
+    <p>Press Coverage</p><br>
+    <p>Careers</p><br>
+    <p>Business Partnership</p><br>
+    <p>Become a Health</p><br>
+    <p>Partner</p><br>
+    <p>Corporate Governance</p><br>
+  </div>
+  <div>
+    <h3>Our Policies</h3><br>
+    <p>Privacy Policy</p><br>
+    <p>Terms and Conditions</p><br>
+    <p>Editorial Policy</p><br>
+    <p>Return Policy</p><br>
+    <p>IP Policy</p><br>
+    <p>Grievence Redressal Policy</p><br>
+    <p>Fake Job and Fraud</p><br>
+    <p>Disclaimer</p><br>
+  </div>
+  <div>
+    <h3>Our Services</h3><br>
+    <p>Order</p><br>
+    <p>Medicines</p><br>
+    <p>Book Lab Tests</p><br>
+    <p>Consult a Doctor</p><br>
+    <p>Ayurveda Articles</p><br>
+    <p>Hindi Articles</p><br>
+    <p>Care Plan</p><br>
+  </div>
+  <div>
+    <h3>Connect</h3><br>
+    <p>Social Link</p><br>
+    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="">
+    <img src="https://cdn-icons-png.flaticon.com/128/3256/3256013.png" alt="">
+    <img src="https://cdn-icons-png.flaticon.com/128/3938/3938026.png" alt="">
+    <img src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png" alt="">
+    <p>Want daily does of health?</p>
+    <button>SIGN UP</button>
+  </div>
+  <div>
+    <h2>Dowanload App</h2>
+    <img src="https://cdn-icons-png.flaticon.com/128/300/300218.png" alt="">
+  </div>
+</div>
+
+<div id="last-footer">
+  <div>
+    <img src="https://onemg.gumlet.io/secure-rebrand_x6f8yq.svg" alt="">
+    <div>
+      <h3>Reliable</h3>
+      <p>All products displayed on Tata 1mg <br> are procured from verified and <br> licensed pharmacies. All labs
+        listed <br>on the platform are accredited</p>
+    </div>
+  </div>
+  <div>
+    <img src="https://onemg.gumlet.io/reliable-rebrand_rcpof3.svg" alt="">
+    <h3>Secure</h3>
+    <p>Tata 1mg uses Secure Sockets<br> Layer (SSL) 128-bit encryption and <br>is Payment Card Industry Data
+      <br>Security Standard (PCI DSS)<br> compliant
+    </p>
+  </div>
+  <div>
+    <img src="https://onemg.gumlet.io/affordable-rebrand_ivgidq.svg" alt="">
+    <h3>Affordable<h3>
+        <p>Find affordable medicine<br> substitutes, save up to 50% on <br>health products, up to 80% off on
+          <br>lab
+          tests and free doctor <br>consultations.
+        </p>
+  </div>
+
+</div>
+<div class="end">
+  <div>
+  <img src="https://onemg.gumlet.io/URS_ebgmxc.png" alt="">
+  </div>
+  <p>India's only LegitScript and ISO/IEC 27001 certified online healthcare platform</p>
+</div><br><br>
+<p style="color: gray; margin-bottom: 10px;">© 2023 Tata 1mg. All rights reserved. In compliance with Drugs and Cosmetics Act, 1940 and Drugs and Cosmetics Rules, 1945, we don't process requests for Schedule X and other habit forming drugs.</p>
+
+
+</div>
+</body>
+<script>
+  
+    let product=document.getElementById("product")
+    let sort=document.getElementById("sort")
+    let filter_category=document.getElementById("filter2")
+
+
+    let a=[]
+
+fetch(`https://6422c107001cb9fc202eeb33.mockapi.io/api/v1/products`)
+.then(res=>{
+    return res.json()
+})
+.then(data=>{
+    console.log(data)
+    display(data)
+    filter(data)
+})
+
+//box-shadow: ;
+
+
+function display(data){
+    product.innerHTML=null;
+    data.forEach((el,i)=>{
+       
+       let card=document.createElement("div")
+       card.style.boxShadow="rgba(0, 0, 0, 0.16) 0px 1px 4px";
+       card.style.borderRadius="10px"
+       card.style.height=""
+       card.setAttribute("id",("card"))
+
+       let three=document.createElement("div")
+       three.style.display="flex";
+       
+       three.style.flexDirection="column"
+     three.style.height="90%"
+     three.style.backgroundColor="y"
+       three.style.margin="20px";
+      
+       three.style.position="relative"
+     
+       three.setAttribute("id","three")
+       
+       let little_card=document.createElement("div")
+       little_card.style.width="100%";
+       little_card.style.height="150px"
+       little_card.style.textAlign="center"
+
+        
+
+       let image = document.createElement("img")
+       image.src=el.image
+       image.style.height="100%"
+       image.style.width="100%"
+       image.style.objectFit="contain"
+       
+       
+       
+       little_card.append(image)
+       let all_data=document.createElement("div")
+       all_data.style.backgroundColor="gra";
+       all_data.padding="50px"
+       all_data.style.marginBottom="30px"
+         
+       let desc=document.createElement("p")
+       desc.innerText=  `Description:- ${el.Description}`
+
+       let name=document.createElement("p")
+       name.innerText =  `name:- ${el.name}`
+
+       let cate=document.createElement("p")
+       cate.innerText= `category:- ${el.category}`
+
+         let price=document.createElement("p")
+          price.innerText=`price:- ${el.price}`
+     
+          let btn_div=document.createElement("div")
+           btn_div.style.position="absolute"
+          btn_div.style.bottom="0"
+          btn_div.style.border="0"
+          btn_div.style.backgroundColor="gr"
+          
+         
+          btn_div.style.width="100%"
+          //  
+
+          let btn=document.createElement("button")
+          btn.setAttribute("class","btn")
+          btn.innerText="Add to Cart"
+          btn.style.width="100%"
+           btn.style.border="0px"
+          btn.style.padding="10px"
+          btn.style.borderRadius="10px"
+          btn_div.append(btn)
+        //   btn_div.style.backgroundColor="yellow"
+
+          btn.addEventListener("click",()=>{
+            let lsdata=JSON.parse(localStorage.getItem("add")) || []
+            // lsdata.push(el)
+            // 
+            let flag=false
+            for(let i=0;i<lsdata.length;i++){
+                if(lsdata[i].name==el.name){
+                    flag=true
+                    break;
+
+                }
+            }
+            if(flag){
+               btn.innerText="Already added"
+            }
+            else{
+                lsdata.push(el)
+                localStorage.setItem("add",JSON.stringify(lsdata))
+              btn.innerText="Added"
+            }
+    
+          })
+          
+         // little_card.append(image,desc,name,cate,price,btn)
+all_data.append(name,desc,cate,price)
+          //card.append(little_card)
+          three.append(little_card,all_data,btn_div)
+          
+          card.append(three)
+
+      product.append(card)
+    })
+
+}
+
+
+//console.log(filter_price,filter_category)
+function filter(a){
+    filter_category.addEventListener("change",(e)=>{
+        if(e.target.value==""){
+            display(a)
+             
+        }
+      else if(e.target.value=="Organic India"){
+           let filt =  a.filter(el=>{
+              return el.category==e.target.value
+             })
+             display(filt)
+      }
+      else if(e.target.value=="Dabar"){
+           let filt =  a.filter(el=>{
+              return el.category==e.target.value
+             })
+             display(filt)
+      }
+
+      else if(e.target.value=="Himalaya"){
+           let filt =  a.filter(el=>{
+              return el.category==e.target.value
+             })
+             display(filt)
+      }
+
+      else if(e.target.value=="Kerala"){
+           let filt =  a.filter(el=>{
+              return el.category==e.target.value
+             })
+             display(filt)
+      }
+
+ })
+
+
+ sort.addEventListener("change",(e)=>{
+    if(e.target.value==""){
+         display(a)
+         console.log("aaaaaaaaaaaaaaaaaaaaaaaa")
+    }
+    else if(e.target.value=="lower"){
+         a.sort((a,b)=>a.price-b.price)   
+         display(a)
+        }
+
+        else if(e.target.value=="high"){
+         a.sort((a,b)=>b.price-a.price)   
+         display(a)
+        }
+
+
+    })
+
+    search.addEventListener("click",(e)=>{
+let dd=document.querySelector("#search_input").value
+
+   //  console.log(dd)
+        if(dd==""){
+          console.log("rrrrrrrrrrrr")
+          // product.innerHTML=null
+          display(a)
+        }
+        else{
+          product.innerHTML=null
+            let t=a.filter((el)=>{
+              
+                return el.name==dd
+            })
+            console.log(t)
+             display(t)
+         }
+    })
+
+}
+
+
+
+
+</script>
+</html>
