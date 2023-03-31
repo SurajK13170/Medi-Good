@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Page</title>
     <link rel="stylesheet" href="./admin.css">
+    <link rel="shortcut icon" href="./MediGood--Logo.png" type="image/x-icon" sizes="180x180">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
     </div>
     <h1 id="header"></h1>
     <div id="filter">
-        <select name="sortByage" id="sortByqua">
+        <select name="sortByage" id="sortbyPrice">
             <option value="">Sort by Price.</option>
             <option value="ltoh">Low To High</option>
             <option value="htol">High To Low</option>
@@ -35,11 +36,10 @@
             <option value="Omron">Omron</option>
         </select>
 
-        <select name="Vaccine" id="Vaccine">
+        <select name="sortbyQua" id="sortbyQua">
             <option value="">Sort by Quantity.</option>
-            <option value="Covishield">Covishield</option>
-            <option value="Covaxin">Covaxin</option>
-            <option value="Sputnik">Sputnik</option>
+            <option value="ltoh">Low To High</option>
+            <option value="htol">High To Low</option>
         </select>
 
     </div>
@@ -72,19 +72,19 @@
                 <h1 style="text-align: center" id="AddandEdit"></h1>
                 <br>
                 <label >Product Name</label><br>
-                <input type="text" id="name" class="inputwidth">
+                <input type="text" id="name" class="inputwidth" >
                 <br>
                 <label >Description</label><br>
-                <input type="text" id="description" class="inputwidth">
+                <input type="text" id="description" class="inputwidth" >
                 <br>
                 <label >Image URL</label><br>
-                <input type="url" id="imageUrl" class="inputwidth">
+                <input type="url" id="imageUrl" class="inputwidth" >
                 <br>
                 <label >Quantity</label><br>
                 <input type="number" id="Quantity" class="inputwidth" >
                 <br>
                 <label >Price</label><br>
-                <input type="number" id="IPrice" class="inputwidth">
+                <input type="number" id="IPrice" class="inputwidth" >
                 <br>
 
                 <label>Category :</label><br>
@@ -102,6 +102,29 @@
                 <button type="submit" id="submitbtn">Submit Data</button>
             </form>
         </div>
+    </div>
+    <div id="userData">
+        <h1 >Users Details</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th> SN.</th>
+                    <th>Name</th>
+                    <th>User Id</th>
+                    <th>Email</th>
+                    <th>Mobile No.</th>
+                    <th>Age</th>
+                    <th>Remove</th>
+
+                </tr>
+            </thead>
+            <tbody id="usertbody">
+                <!-- Data will be appended here -->
+            </tbody>
+        </table>
+    </div>
+    <div id="userbtn">
+
     </div>
 </body>
 <script src="./admin.js"></script>
