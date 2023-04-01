@@ -6,7 +6,10 @@ greetadmin.innerText = "Hello " + AdminName;
 let check = true;
 let updataId = 1;
 let bntSection = document.getElementById("buttonDiv");
-
+document.getElementById("logoimg").addEventListener("click",()=>{
+    window.location.href="./index.html"
+    console.log("location changed")
+})
 let formheader = document.getElementById("AddandEdit");
 formheader.innerText = "Add More Product"
 let mainSection = document.querySelector("tbody");
@@ -217,21 +220,9 @@ async function fetchUserdata() {
     try {
         let data = await fetch(`https://6422c107001cb9fc202eeb33.mockapi.io/api/v1/User`)
         data = await data.json();
-        console.log(data)
-        let totalBtn = Math.ceil(data.length / 5);
-        Userbtn.innerHTML = null;
-        if (totalBtn > 1) {
-            for (let i = 1; i <= totalBtn; i++) {
-                userbtn.append(createBtn2(i))
-            }
-        }
-       newData=[]
-        for (let i = (pNum2 - 1) * 5; i < 5 * pNum2; i++) {
-            if(data[i]==undefined)break
-            newData.push(data[i]);
-        }
-        console.log(newData)
-        userDataappending(newData)
+        
+    
+        userDataappending(data)
     }
     catch (arr) {
         console.log("error");
@@ -242,13 +233,11 @@ let userSection=document.getElementById("usertbody");
 function userDataappending(data){
           userSection.innerHTML=null;
           data.forEach((e,i)=>{
-              console.log(data)
               userSection.append(createuserrow(e,i))
           })
 }
 
 function createuserrow(data,i){
-    console.log("data")
     
     let tr = document.createElement("tr");
     let td1 = document.createElement("td");
@@ -268,16 +257,26 @@ function createuserrow(data,i){
     btnD.innerText="Delete";
     btnD.style.color="red"
 
-    console.log("Hello")
+    btnD.addEventListener("click", () => {
+        deleteuserData(data.id)
+        alert("Item Deleted Succesfully");
+    })
+
     tr.append(td1,td2,td3,td4,td5,td6,btnD);
     return tr  
 }
-function createBtn2(i) {
-    let btn = document.createElement("button");
-    btn.innerText = i;
-    btn.addEventListener("click", () => {
-        pNum2 = i;
+
+async function deleteuserData(id) {
+    try {
+        await fetch(`https://6422c107001cb9fc202eeb33.mockapi.io/api/v1/User/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
         fetchUserdata()
-    })
-    return btn;
+    }
+    catch (err) {
+        console.log(err)
+    }
 }
