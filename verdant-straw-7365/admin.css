@@ -1,0 +1,139 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding:0 15px;
+  border-bottom: 1px solid white;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;  
+  background-color: #fef0d9;
+  box-sizing: border-box;
+}
+#nav img{
+  height: 60px;
+}
+#nav div{
+  margin-left: 30%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+}
+#title {
+  text-align: center;
+  font-size: 50px;
+}
+
+table {
+  background-color: #f4f0f0;
+  border-collapse: collapse;
+  font-size: 20px;
+  font-family: sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  margin-bottom: 50px;
+}
+#table{
+width: 60%;
+}
+#userData{
+  width: 80%;
+  margin: auto;
+}
+table button {
+  padding: 5px;
+  margin: 0 5px;
+  border: 1px solid white;
+  font-size: 20px;
+  border-radius: 5px;
+  color: wheat;
+}
+
+table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+}
+
+
+
+thead tr th {
+  padding: 8px;
+}
+#buttonDiv{
+display: flex;
+justify-content: center;
+margin-bottom: 50px;
+}
+#buttonDiv button{
+background-color: #f1fdff;
+border: 1px solid #39e1ff;
+padding: 10px 40px;
+}
+#container {
+  margin-top: 50px;
+}
+
+#header {
+  text-align: center;
+  padding-top: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-size: 40px;
+ margin-top: 70px;
+}
+
+#filter {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+#filter select {
+  padding: 10px;
+  margin: 0 5px;
+}
+
+#formdata {
+
+width: 380px;
+background-color: #f4f0f0;
+border: 2px solid #009879;
+box-sizing: border-box;
+padding: 35px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.inputwidth {
+width: 93%;
+padding: 8px;
+margin-bottom: 10px;
+}
+
+#submitbtn {
+background-color: #009879;
+color: white;
+border: 1px solid green;
+font-size: 15px;
+font-weight: bold;
+cursor: pointer;
+width: 100%;
+padding: 10px;
+}
+
+#submitbtn:hover {
+background-color: #018a6e;
+}
+.selecttags {
+padding: 10px;
+width: 100%;
+
+}
+#container{
+display: flex;
+justify-content: space-around;
+}
