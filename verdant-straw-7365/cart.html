@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    #nav1 {
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: rgb(255, 241, 217);
+
+    }
+
+    #Navbar {
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index: 4;
+
+    }
+
+    .left a {
+        text-decoration: none;
+        color: black;
+        margin-left: 15px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .left img {
+        width: 150px;
+    }
+
+    .rigth img {
+        width: 30px;
+    }
+
+    .left a:hover {
+        color: red;
+        text-decoration: overline;
+    }
+
+    .rigth a {
+        text-decoration: none;
+        color: black;
+        margin-left: 8px;
+        font-size: 15px;
+    }
+
+    .rigth a:hover {
+        color: rgb(165, 160, 160);
+
+    }
+
+    #main {
+        display: flex;
+    }
+
+    .product-details {
+        display: flex;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        padding: 20px;
+    }
+
+    #cartPage img {
+        margin-right: 50px;
+    }
+
+    #cartPage {
+        width: 450px;
+        padding: 20px;
+    }
+
+    .product-details button {
+        display: inline;
+        background-color: green;
+        color: white;
+        font-weight: bold;
+        width: 100px;
+        height: 30px;
+
+    }
+
+    #formData a {
+        text-decoration: none;
+        color: black;
+
+    }
+
+    #formData button {
+        border-radius: 5px;
+        background-color: rgb(135, 240, 240);
+        width: 150px;
+        height: 30px;
+    }
+
+    #formData button:hover {
+        background-color: rgb(28, 221, 221);
+
+    }
+    #formData input{
+        width: 300px;
+        height: 35px;
+        
+    }
+
+
+
+
+    /* css for popUp */
+    .model {
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        background-color: #0000005c;
+        left: 0;
+        display: none;
+        z-index: 5;
+
+    }
+
+    #log {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: relative;
+        background-color: white;
+
+        width: 40%;
+        gap: 40px;
+        justify-content: space-between;
+        padding: 20px;
+        overflow: hidden;
+        box-shadow: 0px 1px 5px rgb(67, 65, 65);
+        border-radius: 10px;
+    }
+
+    #log div input {
+        height: 40px;
+
+        padding: 10px;
+    }
+
+
+
+    .model.open {
+        display: block;
+    }
+
+    .close {
+        position: absolute;
+        right: 20px;
+        scale: 1.5;
+        cursor: pointer;
+    }
+
+
+
+
+    .Paymetnform {
+        display: flex;
+        max-width: 500px;
+        box-shadow: 0 0 12px 0px #00000040;
+        margin-top: 20px;
+        flex-direction: column;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .Paymetnform .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .Paymetnform .card div:nth-child(1) {
+        grid-column: span 2;
+    }
+
+    .Paymetnform .card button {
+        margin-top: 20px;
+        height: 40px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        background-color: #1e90ff;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+    .Paymetnform .card button:hover {
+        background-color: #0077ff;
+    }
+
+    .Paymetnform .card div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .Paymetnform .card input {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 16px;
+        color: #333;
+        transition: border-color 0.2s ease;
+    }
+
+    .Paymetnform .card input:focus {
+        outline: none;
+        border-color: #1e90ff;
+    }
+
+    .price {
+        font-size: 18px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+
+    <div id="Navbar">
+        <div id="nav1">
+            <div class="left">
+                <img src="./MediGood--Logo.png" alt="">
+                <a href="">MEDICINES</a>
+                <a href="">LAB TESTES</a>
+                <a href="">CONSULT DOCTORS</a>
+                <a href="">COVID 19</a>
+                <a href="">AYURVEDA</a>
+                <a href="">CARE PLAN</a>
+            </div>
+            <div class="rigth">
+                <a href="index.html">Home</a> |
+                <a href="">Offer</a>
+                <img class="cart" src="https://cdn-icons-png.flaticon.com/128/2838/2838838.png" alt="">
+                <a href="">Need Help?</a>
+            </div>
+        </div>
+
+    </div>
+    <div id="main">
+
+        <div id="cartPage">
+
+        </div>
+        <div id="formData">
+            <form action="">
+                <h2>Continue with your Order</h2>
+                <p>Add Address</p>
+                <label for="">Full Name - </label>
+                <input type="text" name="name" id="" placeholder="Enter Full Name" required><br><br>
+                <label for="">Phone Number - </label>
+                <input type="number" name="contect" id="" placeholder="Enter Phone Number" required><br><br>
+                <label for="">Pincode - </label>
+                <input type="number" name="pincode" id="" placeholder="Pincode" required><br><br>
+                <label for="">Road Name Area or Colony -</label>
+                <input type="text" name="" id="" placeholder="Enter Full Address" required><br><br>
+
+
+
+
+                <button><a href='javascript:document.querySelector("#singup").classList.toggle("open")'
+                        id="sinup">Continue</a></button>
+
+
+
+
+            </form>
+            <div id="price"></div>
+        </div>
+
+        <!-- append here -->
+
+    </div>
+    </div>
+    <div class="model" id="singup" name="model">
+        <div id="log">
+            <span class="close" onclick="this.closest('.model').classList.toggle('open')">&times;</span>
+            <h2>Enter Account Details</h2>
+            <div class="Paymetnform">
+                <div class="price"></div>
+                <form class="card">
+                    <div>
+                        Account Number
+                        <input type="text" required minlength="12" maxlength="12" placeholder="000-000-000-000">
+                    </div>
+                    <div>
+                        CVV
+                        <input type="text" required placeholder="eg. 123">
+                    </div>
+                    <div>
+                        Expiry
+                        <input type="text" required placeholder="MM/YY">
+                    </div>
+                    <div>
+                        OTP
+                        <input type="number" id="otp" disabled placeholder="One Time Password">
+                    </div>
+                    <button id="sub" type="submit">Get Otp</button>
+                    <!-- <button onclick="setTimeout(openPopup, 3000)">Submit</button> -->
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+
+
+    let user = localStorage.getItem("auth")
+    if(user == null){
+        alert("Login First")
+        location="index.html"
+    }
+
+    let app = document.getElementById("cartPage");
+    let data = JSON.parse(localStorage.getItem("add")) || [];
+
+    function DisplayData() {
+        app.innerHTML = "";
+        let totalPrice = 0;
+
+        for (let i = 0; i < data.length; i++) {
+            let imgCard = document.createElement("div");
+            imgCard.className = "img-card";
+
+            let div = document.createElement("div");
+            div.className = "product-details";
+
+            let newDiv = document.createElement("div");
+            newDiv.className = "price-rating";
+
+            let name = document.createElement("h4");
+            name.className = "product-name";
+
+            let price = document.createElement("p");
+            price.className = "product-price";
+
+            let image = document.createElement("img");
+            image.className = "product-image";
+
+            let btn = document.createElement("button");
+            btn.className = "proceed-button";
+
+            let Description = document.createElement("p");
+            let category = document.createElement("p");
+
+            let incre = document.createElement("button");
+            let quant = document.createElement("p");
+            let decre = document.createElement("button");
+            let remove = document.createElement("button");
+
+            incre.innerText = "+";
+            decre.innerText = "-";
+            quant.innerText = parseInt(data[i].quantity) || 1;
+            remove.innerText = "REMOVE";
+
+            image.src = data[i].image;
+            name.textContent = data[i].name;
+            Description.innerText = "Description :-" + data[i].Description;
+            category.innerText = "Category:- " + data[i].category;
+            price.textContent = "Price: ₹ " + data[i].price;
+
+            btn.innerText = "Proceed";
+
+            incre.addEventListener("click", () => {
+                data[i].quantity = data[i].quantity ? data[i].quantity + 1 : 1;
+                localStorage.setItem("add", JSON.stringify(data));
+                DisplayData();
+            });
+
+            decre.addEventListener("click", () => {
+                data[i].quantity = data[i].quantity && data[i].quantity > 0 ? data[i].quantity - 1 : 0;
+                localStorage.setItem("add", JSON.stringify(data));
+                DisplayData();
+            });
+
+            remove.addEventListener("click", () => {
+                data.splice(i, 1);
+                localStorage.setItem("add", JSON.stringify(data));
+                DisplayData();
+            });
+
+            imgCard.append(image);
+            newDiv.append(name, category, Description, price, decre, quant, incre, remove);
+            div.append(imgCard, newDiv);
+            app.append(div);
+
+            totalPrice += parseFloat(data[i].price) * (data[i].quantity || 1);
+            localStorage.setItem("Totalprice", JSON.stringify(totalPrice))
+        }
+        let totalDiv = document.createElement("div");
+        totalDiv.className = "total-price";
+        totalDiv.textContent = "Total price: ₹ " + totalPrice.toFixed(2);
+
+        let pricediv = document.getElementById("price");
+        pricediv.innerHTML = "";
+        pricediv.append(totalDiv);
+
+    }
+    DisplayData()
+
+
+
+
+
+
+    let form = document.getElementsByClassName("Paymetnform")[0]
+    let otp = document.getElementById("otp")
+
+    const randomRange = (min, max) => Math.floor(Math.random() * (max - min) + min)
+    let sub = document.getElementById("sub")
+    let code = 0
+
+    form.onsubmit = e => {
+        e.preventDefault()
+        console.log(otp.disabled)
+        if (otp.disabled == false) {
+            if (otp.valueAsNumber == code) {
+                alert("Item Ordered Successfully")
+                location = "index.html"
+            } else {
+                alert("Wrong OTP")
+            }
+            return
+        }
+        otp.disabled = false
+        otp.required = true
+
+        code = randomRange(1000, 9999)
+        setTimeout(() => {
+            alert("Your otp is " + code + "!")
+        }, 2000)
+    }
+
+
+
+
+
+</script>
