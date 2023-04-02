@@ -570,3 +570,12 @@
   }
 
   }
+  #main-footer p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  #main-footer h3:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: red;
+  }
