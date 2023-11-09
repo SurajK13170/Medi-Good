@@ -1,6 +1,8 @@
 # verdant-straw
 Project name :-  MEDI GOOD
 
+Medi Good is an e-commerce platform for purchasing medicines, inspired by the TATA 1mg website.
+
 Members
 1.Suraj (Landingpage)
 2.Sunil(Admin Page)
